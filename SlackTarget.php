@@ -152,7 +152,7 @@ class SlackTarget extends Target
             ->setFormat(Client::FORMAT_JSON)
             ->send();
         if (!$response->getIsOk()) {
-//            var_dump($response->getContent());
+            var_dump($response->getContent());
             throw new Exception(
                 'Unable to send logs to Slack: ' . $response->getContent()
             );
